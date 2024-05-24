@@ -8,13 +8,13 @@
     const scoreLabel = document.querySelector('#result > p');
 
     const quizSet = [
-        {q: '酸素', c: ['o2.svg', 'co2.svg', 'o3.svg', 'o.svg']},
-        {q: '過酸化水素', c: ['h2o2.svg', 'h2o.svg', 'h2o3.svg', 'h2o4.svg']},
-        {q: '二酸化マンガン', c: ['mno2.svg', 'hcl.svg']},
-        {q: '二酸化炭素', c: ['co2.svg', 'o2.svg']},
-        {q: '塩酸(塩化水素)', c: ['hcl.svg', 'h2o2.svg']},
-        {q: '炭酸カルシウム', c: ['caco3.svg', 'caco2.svg', 'caco.svg']},
-        {q: 'アンモニア', c: ['nh3.svg', 'nh2.svg', 'nh4.svg']},
+        {q: '酸素', c: ['o2', 'co2', 'o3', 'o']},
+        {q: '過酸化水素', c: ['h2o2', 'h2o', 'h2o3', 'h2o4']},
+        {q: '二酸化マンガン', c: ['mno2', 'hcl']},
+        {q: '二酸化炭素', c: ['co2', 'o2']},
+        {q: '塩酸(塩化水素)', c: ['hcl', 'h2o2']},
+        {q: '炭酸カルシウム', c: ['caco3', 'caco2', 'caco']},
+        {q: 'アンモニア', c: ['nh3', 'nh2', 'nh4']},
         // {q: '塩化アンモニウム', c: ['NH4Cl', '○']},
         // {q: '水酸化カルシウム', c: ['Ca(OH)2', '○']},
         // {q: '水素', c: ['H2', '○']},
@@ -70,7 +70,7 @@
             const li = document.createElement('li');
             const img = document.createElement('img');
             li.textContent = choice;
-            img.src = choice;
+            img.src = 'img/' + choice + '.svg';
             li.addEventListener('click', () => {
                 checkAnswer(li);
             });
